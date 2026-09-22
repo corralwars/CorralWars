@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b3r4y3iuve6lg"]
+
+[ext_resource type="PackedScene" uid="uid://cfmbewp7cpstp" path="res://scenes/characters/Player.tscn" id="1_skenu"]
+[ext_resource type="PackedScene" uid="uid://dl4h8i18fe45l" path="res://scenes/characters/Neighboords/MadreEcuanime.tscn" id="2_up64k"]
+
+[node name="Node2D" type="Node2D" unique_id=1380334346]
+
+[node name="Player" parent="." unique_id=107269047 instance=ExtResource("1_skenu")]
+position = Vector2(387.99997, 346.99997)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1835327006]
+
+[node name="MadreEcuanime" parent="." unique_id=1701767382 instance=ExtResource("2_up64k")]
+position = Vector2(805.99994, 341)

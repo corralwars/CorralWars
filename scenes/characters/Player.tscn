@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://cfmbewp7cpstp"]
+
+[ext_resource type="Texture2D" uid="uid://cbhwvwhyftatj" path="res://assets/Characters/Roxxane Flint/Idle/flint_0001.png" id="1_7wym0"]
+[ext_resource type="Script" uid="uid://by1se60hs5iym" path="res://scripts/characters/player.gd" id="1_bpxo2"]
+[ext_resource type="Texture2D" uid="uid://bcmklkbhxuba6" path="res://assets/Characters/Roxxane Flint/Jump/flint jump_0004.png" id="1_mqro2"]
+[ext_resource type="Texture2D" uid="uid://b3h06nwpxb5w7" path="res://assets/Characters/Roxxane Flint/Idle/flint_0002.png" id="2_gj1sn"]
+[ext_resource type="Texture2D" uid="uid://bqm4f01w2dd4e" path="res://assets/Characters/Roxxane Flint/Idle/flint_0003.png" id="3_rpfb3"]
+[ext_resource type="Texture2D" uid="uid://cfi206jfvm4xn" path="res://assets/Characters/Roxxane Flint/Idle/flint_0004.png" id="4_miirx"]
+[ext_resource type="Texture2D" uid="uid://dt4olmdhyu8d7" path="res://assets/Characters/Roxxane Flint/Walk_Front/flint walk front_0001.png" id="5_m6phi"]
+[ext_resource type="Texture2D" uid="uid://cslbkhh1xmnve" path="res://assets/Characters/Roxxane Flint/Walk_Front/flint walk front_0002.png" id="6_oihyf"]
+[ext_resource type="Texture2D" uid="uid://b6r4magnydob0" path="res://assets/Characters/Roxxane Flint/Walk_Front/flint walk front_0003.png" id="7_7lms1"]
+[ext_resource type="Texture2D" uid="uid://i87nbmhsp5pa" path="res://assets/Characters/Roxxane Flint/Jump/flint jump_0003.png" id="7_bpxo2"]
+[ext_resource type="Texture2D" uid="uid://bke8a727hbqsg" path="res://assets/Characters/Roxxane Flint/Walk_Front/flint walk front_0004.png" id="8_ufbvs"]
+[ext_resource type="Texture2D" uid="uid://bhcyrfxwgk1bj" path="res://assets/Characters/Roxxane Flint/Walk_Up/walkup_0001.png" id="12_m0xnk"]
+[ext_resource type="Texture2D" uid="uid://cm2b22mbr7ebp" path="res://assets/Characters/Roxxane Flint/Walk_Up/walkup_0002.png" id="13_cro7t"]
+[ext_resource type="Texture2D" uid="uid://cxym2434kqgc1" path="res://assets/Characters/Roxxane Flint/Walk_Up/walkup_0003.png" id="14_q4687"]
+[ext_resource type="Texture2D" uid="uid://br7v1l2e2dtmu" path="res://assets/Characters/Roxxane Flint/Walk_Up/walkup_0004.png" id="15_8el8x"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oht21"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mqro2")
+}],
+"loop": 0,
+"name": &"Fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7wym0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_gj1sn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_rpfb3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_miirx")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_bpxo2")
+}],
+"loop": 2,
+"name": &"Jump",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_m6phi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_oihyf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7lms1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_ufbvs")
+}],
+"loop": 1,
+"name": &"Walk_Front",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_m0xnk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_cro7t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_q4687")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_8el8x")
+}],
+"loop": 1,
+"name": &"Walk_Up",
+"speed": 6.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7wym0"]
+radius = 6.0
+height = 24.0
+
+[node name="Player" type="CharacterBody2D" unique_id=107269047 groups=["Player"]]
+scale = Vector2(3.6614127, 3.6614127)
+script = ExtResource("1_bpxo2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2084403467]
+sprite_frames = SubResource("SpriteFrames_oht21")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=697767521]
+position = Vector2(0, -3)
+shape = SubResource("CapsuleShape2D_7wym0")

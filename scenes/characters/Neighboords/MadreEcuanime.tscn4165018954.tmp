@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://dl4h8i18fe45l"]
+
+[ext_resource type="Texture2D" uid="uid://4smibvqo4tj0" path="res://assets/Characters/MadreEcuanime/Idle/MadreEcuanimeIdle_0001.png" id="1_783w0"]
+[ext_resource type="Script" uid="uid://ds08ht5ijdgsi" path="res://scripts/characters/Neighboords/madre_ecuanime.gd" id="1_ua3ti"]
+[ext_resource type="Texture2D" uid="uid://d4ka3ix6s4ym6" path="res://assets/Characters/MadreEcuanime/Idle/MadreEcuanimeIdle_0002.png" id="2_niuwv"]
+[ext_resource type="Texture2D" uid="uid://dxwqui3gw7ixp" path="res://assets/Characters/MadreEcuanime/Jump/Jump_0002.png" id="2_xxkdm"]
+[ext_resource type="Texture2D" uid="uid://b7k0ifye0ubao" path="res://assets/Characters/MadreEcuanime/WalkFront/WalkFront_0001.png" id="3_70pmf"]
+[ext_resource type="Texture2D" uid="uid://cut0kdtlot043" path="res://assets/Characters/MadreEcuanime/Jump/Jump_0001.png" id="4_10gkd"]
+[ext_resource type="Texture2D" uid="uid://v18e1bbputay" path="res://assets/Characters/MadreEcuanime/WalkFront/WalkFront_0002.png" id="4_ua3ti"]
+[ext_resource type="Texture2D" uid="uid://qa3tslica54n" path="res://assets/Characters/MadreEcuanime/WalkFront/WalkFront_0003.png" id="5_10gkd"]
+[ext_resource type="Texture2D" uid="uid://i2pylhmp6smv" path="res://assets/Characters/MadreEcuanime/WalkFront/WalkFront_0004.png" id="6_xxkdm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4n17y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_xxkdm")
+}],
+"loop": 1,
+"name": &"Fall",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_783w0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_niuwv")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_10gkd")
+}],
+"loop": 1,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_70pmf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ua3ti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_10gkd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_xxkdm")
+}],
+"loop": 1,
+"name": &"Walk_Front",
+"speed": 6.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_70pmf"]
+radius = 6.0
+height = 22.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1701767382]
+scale = Vector2(3.661, 3.661)
+script = ExtResource("1_ua3ti")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1261366336]
+sprite_frames = SubResource("SpriteFrames_4n17y")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=532742488]
+position = Vector2(0, -2)
+shape = SubResource("CapsuleShape2D_70pmf")

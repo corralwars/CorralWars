@@ -1,0 +1,18 @@
+# Archivos de texto
+*.gd      text
+*.tscn    text
+*.tres    text
+*.godot   text
+*.cfg     text
+
+# Recursos binarios
+*.png     binary
+*.jpg     binary
+*.jpeg    binary
+*.webp    binary
+*.gif     binary
+*.wav     binary
+*.mp3     binary
+*.ogg     binary
+*.ttf     binary
+*.otf     binary
