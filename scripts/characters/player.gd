@@ -1,8 +1,9 @@
-extends CharacterBody2D
+class_name Player extends CharacterBody2D
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
-const TOP_VIEW_SPEED = 300.0
+@export var SPEED = 300.0
+@export var JUMP_VELOCITY = -400.0
+@export var TOP_VIEW_SPEED = 300.0
+@export var animatedSprite2D:AnimatedSprite2D
 
 var is_fight_scene := false
 
@@ -40,14 +41,14 @@ func _physics_process_fight(delta: float) -> void:
 
 	if not is_on_floor():
 		if velocity.y < 0:
-			$AnimatedSprite2D.play("Jump")
+			animatedSprite2D.play("Jump")
 		else:
-			$AnimatedSprite2D.play("Fall")
+			animatedSprite2D.play("Fall")
 	else:
 		if direction != 0:
-			$AnimatedSprite2D.play("Walk_Front")
+			animatedSprite2D.play("Walk_Front")
 		else:
-			$AnimatedSprite2D.play("Idle")
+			animatedSprite2D.play("Idle")
 
 
 func _physics_process_top_view(delta: float) -> void:
@@ -56,10 +57,12 @@ func _physics_process_top_view(delta: float) -> void:
 
 	move_and_slide()
 
-	if direction.y != 0:
-		$AnimatedSprite2D.play("Walk_Up")
+	if direction.y > 0:
+		animatedSprite2D.play("Walk_Down")
+	elif direction.y < 0:
+		animatedSprite2D.play("Walk_Up")
 	elif direction.x != 0:
-		$AnimatedSprite2D.flip_h = direction.x < 0
-		$AnimatedSprite2D.play("Walk_Front")
+		animatedSprite2D.play("Walk_Front")
+		animatedSprite2D.flip_h = direction.x < 0
 	else:
-		$AnimatedSprite2D.play("Idle")
+		animatedSprite2D.play("Idle")
