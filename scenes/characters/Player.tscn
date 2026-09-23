@@ -10,7 +10,11 @@
 [ext_resource type="Texture2D" uid="uid://cslbkhh1xmnve" path="res://assets/Characters/Roxxane Flint/Walk_Front/flint walk front_0002.png" id="6_oihyf"]
 [ext_resource type="Texture2D" uid="uid://b6r4magnydob0" path="res://assets/Characters/Roxxane Flint/Walk_Front/flint walk front_0003.png" id="7_7lms1"]
 [ext_resource type="Texture2D" uid="uid://i87nbmhsp5pa" path="res://assets/Characters/Roxxane Flint/Jump/flint jump_0003.png" id="7_bpxo2"]
+[ext_resource type="Texture2D" uid="uid://0omk8bemqj45" path="res://assets/Characters/Roxxane Flint/Walk_Down/FlintWalkDown_0001.png" id="8_dhihs"]
 [ext_resource type="Texture2D" uid="uid://bke8a727hbqsg" path="res://assets/Characters/Roxxane Flint/Walk_Front/flint walk front_0004.png" id="8_ufbvs"]
+[ext_resource type="Texture2D" uid="uid://cam3mrkwhothx" path="res://assets/Characters/Roxxane Flint/Walk_Down/FlintWalkDown_0002.png" id="9_wid4g"]
+[ext_resource type="Texture2D" uid="uid://rv0pw0gwdkb8" path="res://assets/Characters/Roxxane Flint/Walk_Down/FlintWalkDown_0003.png" id="10_gquc1"]
+[ext_resource type="Texture2D" uid="uid://vubblvvmllly" path="res://assets/Characters/Roxxane Flint/Walk_Down/FlintWalkDown_0004.png" id="11_cdscg"]
 [ext_resource type="Texture2D" uid="uid://bhcyrfxwgk1bj" path="res://assets/Characters/Roxxane Flint/Walk_Up/walkup_0001.png" id="12_m0xnk"]
 [ext_resource type="Texture2D" uid="uid://cm2b22mbr7ebp" path="res://assets/Characters/Roxxane Flint/Walk_Up/walkup_0002.png" id="13_cro7t"]
 [ext_resource type="Texture2D" uid="uid://cxym2434kqgc1" path="res://assets/Characters/Roxxane Flint/Walk_Up/walkup_0003.png" id="14_q4687"]
@@ -53,6 +57,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("8_dhihs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wid4g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_gquc1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_cdscg")
+}],
+"loop": 1,
+"name": &"Walk_Down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("5_m6phi")
 }, {
 "duration": 1.0,
@@ -90,13 +111,14 @@ animations = [{
 radius = 6.0
 height = 24.0
 
-[node name="Player" type="CharacterBody2D" unique_id=107269047 groups=["Player"]]
+[node name="Player" type="CharacterBody2D" unique_id=107269047 node_paths=PackedStringArray("animatedSprite2D") groups=["Player"]]
 scale = Vector2(3.6614127, 3.6614127)
 script = ExtResource("1_bpxo2")
+animatedSprite2D = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2084403467]
 sprite_frames = SubResource("SpriteFrames_oht21")
-animation = &"Idle"
+animation = &"Walk_Front"
 autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=697767521]

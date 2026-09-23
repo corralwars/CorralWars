@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://bfqovtv5vbf48"]
+
+[ext_resource type="Script" uid="uid://3xa6r1an3s4e" path="res://scripts/characters/bear_pet.gd" id="1_nj5h1"]
+[ext_resource type="Texture2D" uid="uid://fpgdy5aj5hv4" path="res://assets/Characters/Roxxane Flint/BearPet/WalkFront/BearPetWalkFront_0001.png" id="2_4hxuy"]
+[ext_resource type="Texture2D" uid="uid://d4jkwvcqrukm7" path="res://assets/Characters/Roxxane Flint/BearPet/Idle/BearPetIdle_0001.png" id="2_nxpyd"]
+[ext_resource type="Texture2D" uid="uid://c75fdn3q86ao1" path="res://assets/Characters/Roxxane Flint/BearPet/WalkFront/BearPetWalkFront_0002.png" id="3_7f165"]
+[ext_resource type="Texture2D" uid="uid://bkf4stii5dccd" path="res://assets/Characters/Roxxane Flint/BearPet/Idle/BearPetIdle_0002.png" id="3_oc1e7"]
+[ext_resource type="Texture2D" uid="uid://cxoyvc7swhmpx" path="res://assets/Characters/Roxxane Flint/BearPet/WalkFront/BearPetWalkFront_0003.png" id="4_h2bsc"]
+[ext_resource type="Texture2D" uid="uid://l48tpssri5bo" path="res://assets/Characters/Roxxane Flint/BearPet/Idle/BearPetIdle_0003.png" id="4_pp4df"]
+[ext_resource type="Texture2D" uid="uid://c8vcd1lm0sijv" path="res://assets/Characters/Roxxane Flint/BearPet/WalkFront/BearPetWalkFront_0004.png" id="5_cwd8k"]
+[ext_resource type="Texture2D" uid="uid://bcw67jcy26ipt" path="res://assets/Characters/Roxxane Flint/BearPet/Idle/BearPetIdle_0004.png" id="5_slag4"]
+[ext_resource type="Texture2D" uid="uid://5dkewgopna14" path="res://assets/Characters/Roxxane Flint/BearPet/Idle/BearPetIdle_0005.png" id="6_dvue7"]
+[ext_resource type="Texture2D" uid="uid://dt7hucn6na6xv" path="res://assets/Characters/Roxxane Flint/BearPet/Idle/BearPetIdle_0006.png" id="7_jk1sa"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nj5h1"]
+animations = [{
+"frames": [{
+"duration": 5.0,
+"texture": ExtResource("2_nxpyd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_oc1e7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_pp4df")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_slag4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dvue7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_jk1sa")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_7f165")
+}],
+"loop": 1,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_4hxuy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7f165")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_h2bsc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_cwd8k")
+}],
+"loop": 1,
+"name": &"Walk_Front",
+"speed": 6.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_481ug"]
+radius = 6.282437
+height = 18.027863
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1038748228 node_paths=PackedStringArray("COLLISION", "animatedSprite") groups=["npc"]]
+scale = Vector2(3.661, 3.661)
+script = ExtResource("1_nj5h1")
+GROUP_FOLLOW = "Player"
+COLLISION = NodePath(".")
+animatedSprite = NodePath("AnimatedSprite2D")
+IsInUse = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=549918]
+sprite_frames = SubResource("SpriteFrames_nj5h1")
+animation = &"Jump"
+autoplay = "Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=200568081]
+position = Vector2(0, 1.0925977)
+shape = SubResource("CapsuleShape2D_481ug")

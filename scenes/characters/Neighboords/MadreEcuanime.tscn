@@ -1,14 +1,22 @@
 [gd_scene format=3 uid="uid://dl4h8i18fe45l"]
 
 [ext_resource type="Texture2D" uid="uid://4smibvqo4tj0" path="res://assets/Characters/MadreEcuanime/Idle/MadreEcuanimeIdle_0001.png" id="1_783w0"]
-[ext_resource type="Script" uid="uid://ds08ht5ijdgsi" path="res://scripts/characters/Neighboords/madre_ecuanime.gd" id="1_ua3ti"]
+[ext_resource type="Script" uid="uid://ds08ht5ijdgsi" path="res://scripts/characters/neighboords/madre_ecuanime.gd" id="1_ua3ti"]
 [ext_resource type="Texture2D" uid="uid://d4ka3ix6s4ym6" path="res://assets/Characters/MadreEcuanime/Idle/MadreEcuanimeIdle_0002.png" id="2_niuwv"]
 [ext_resource type="Texture2D" uid="uid://dxwqui3gw7ixp" path="res://assets/Characters/MadreEcuanime/Jump/Jump_0002.png" id="2_xxkdm"]
 [ext_resource type="Texture2D" uid="uid://b7k0ifye0ubao" path="res://assets/Characters/MadreEcuanime/WalkFront/WalkFront_0001.png" id="3_70pmf"]
 [ext_resource type="Texture2D" uid="uid://cut0kdtlot043" path="res://assets/Characters/MadreEcuanime/Jump/Jump_0001.png" id="4_10gkd"]
 [ext_resource type="Texture2D" uid="uid://v18e1bbputay" path="res://assets/Characters/MadreEcuanime/WalkFront/WalkFront_0002.png" id="4_ua3ti"]
 [ext_resource type="Texture2D" uid="uid://qa3tslica54n" path="res://assets/Characters/MadreEcuanime/WalkFront/WalkFront_0003.png" id="5_10gkd"]
+[ext_resource type="Texture2D" uid="uid://cluq8nsij0p5l" path="res://assets/Characters/MadreEcuanime/WalkUp/MadreEcuanimeWalkUp_0001.png" id="6_thjqr"]
 [ext_resource type="Texture2D" uid="uid://i2pylhmp6smv" path="res://assets/Characters/MadreEcuanime/WalkFront/WalkFront_0004.png" id="6_xxkdm"]
+[ext_resource type="Texture2D" uid="uid://crnn8l2j60ngh" path="res://assets/Characters/MadreEcuanime/WalkUp/MadreEcuanimeWalkUp_0002.png" id="7_x07dn"]
+[ext_resource type="Texture2D" uid="uid://0ompx3tu0hsm" path="res://assets/Characters/MadreEcuanime/WalkUp/MadreEcuanimeWalkUp_0003.png" id="8_4vr4f"]
+[ext_resource type="Texture2D" uid="uid://b0nylkw25bnle" path="res://assets/Characters/MadreEcuanime/WalkUp/MadreEcuanimeWalkUp_0004.png" id="9_ttu7s"]
+[ext_resource type="Texture2D" uid="uid://djw5wipnvjn4k" path="res://assets/Characters/MadreEcuanime/WalkDown/madreEcuanimeWalkDown_0001.png" id="10_j7yra"]
+[ext_resource type="Texture2D" uid="uid://f18lrur40j1g" path="res://assets/Characters/MadreEcuanime/WalkDown/madreEcuanimeWalkDown_0002.png" id="11_r1rqp"]
+[ext_resource type="Texture2D" uid="uid://cfvwhkbm0iwq3" path="res://assets/Characters/MadreEcuanime/WalkDown/madreEcuanimeWalkDown_0003.png" id="12_q64g0"]
+[ext_resource type="Texture2D" uid="uid://36ve02y84g5g" path="res://assets/Characters/MadreEcuanime/WalkDown/madreEcuanimeWalkDown_0004.png" id="13_8w5fk"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4n17y"]
 animations = [{
@@ -41,6 +49,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("10_j7yra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_r1rqp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_q64g0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_8w5fk")
+}],
+"loop": 1,
+"name": &"Walk_Down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("3_70pmf")
 }, {
 "duration": 1.0,
@@ -55,16 +80,32 @@ animations = [{
 "loop": 1,
 "name": &"Walk_Front",
 "speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_thjqr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_x07dn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_4vr4f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_ttu7s")
+}],
+"loop": 1,
+"name": &"Walk_Up",
+"speed": 5.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_70pmf"]
 radius = 6.0
 height = 22.0
 
-[node name="MadreEcuanime" type="CharacterBody2D" unique_id=1701767382 node_paths=PackedStringArray("animatedSprite")]
+[node name="MadreEcuanime" type="CharacterBody2D" unique_id=1701767382 node_paths=PackedStringArray("animatedSprite") groups=["npc"]]
 scale = Vector2(3.661, 3.661)
 script = ExtResource("1_ua3ti")
-MOVE_AREA_MAX = Vector2(600, 600)
 animatedSprite = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1261366336]

@@ -1,12 +1,10 @@
 [gd_scene format=3 uid="uid://b3r4y3iuve6lg"]
 
-[ext_resource type="Script" uid="uid://0vyvjqlv56g3" path="res://scripts/locatios/neighborhood.gd" id="1_pjxhv"]
 [ext_resource type="PackedScene" uid="uid://cfmbewp7cpstp" path="res://scenes/characters/Player.tscn" id="1_skenu"]
 [ext_resource type="PackedScene" uid="uid://dl4h8i18fe45l" path="res://scenes/characters/Neighboords/MadreEcuanime.tscn" id="2_up64k"]
 [ext_resource type="PackedScene" uid="uid://bfqovtv5vbf48" path="res://scenes/characters/BearPet.tscn" id="3_mpn5g"]
 
-[node name="Neighborhood" type="Node2D" unique_id=1380334346]
-script = ExtResource("1_pjxhv")
+[node name="Node2D" type="Node2D" unique_id=1380334346]
 
 [node name="Player" parent="." unique_id=107269047 instance=ExtResource("1_skenu")]
 position = Vector2(387.99997, 346.99997)
@@ -17,4 +15,4 @@ position = Vector2(387.99997, 346.99997)
 position = Vector2(805.99994, 341)
 
 [node name="CharacterBody2D" parent="." unique_id=1038748228 instance=ExtResource("3_mpn5g")]
-position = Vector2(315, 346)
+position = Vector2(325, 346)
