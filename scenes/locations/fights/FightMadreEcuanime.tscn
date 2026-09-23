@@ -536,4 +536,3 @@ position = Vector2(972.99994, 593)
 
 [node name="CharacterBody2D" parent="." unique_id=1038748228 instance=ExtResource("3_gfa5g")]
 position = Vector2(150, 584)
-MOVEMENT_DELAY = 1.0

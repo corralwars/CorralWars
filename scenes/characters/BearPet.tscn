@@ -11,6 +11,14 @@
 [ext_resource type="Texture2D" uid="uid://bcw67jcy26ipt" path="res://assets/Characters/Roxxane Flint/BearPet/Idle/BearPetIdle_0004.png" id="5_slag4"]
 [ext_resource type="Texture2D" uid="uid://5dkewgopna14" path="res://assets/Characters/Roxxane Flint/BearPet/Idle/BearPetIdle_0005.png" id="6_dvue7"]
 [ext_resource type="Texture2D" uid="uid://dt7hucn6na6xv" path="res://assets/Characters/Roxxane Flint/BearPet/Idle/BearPetIdle_0006.png" id="7_jk1sa"]
+[ext_resource type="Texture2D" uid="uid://bem254jasrhy4" path="res://assets/Characters/Roxxane Flint/BearPet/WalkDown/BearPetWalkDown_0001.png" id="9_8576j"]
+[ext_resource type="Texture2D" uid="uid://df6hm72spas3e" path="res://assets/Characters/Roxxane Flint/BearPet/WalkDown/BearPetWalkDown_0002.png" id="10_68ixv"]
+[ext_resource type="Texture2D" uid="uid://knqi0a836gk4" path="res://assets/Characters/Roxxane Flint/BearPet/WalkDown/BearPetWalkDown_0003.png" id="11_sqm1u"]
+[ext_resource type="Texture2D" uid="uid://dnjfbafwk8a6p" path="res://assets/Characters/Roxxane Flint/BearPet/WalkUp/BearPetWalkUp_0001.png" id="12_dvue7"]
+[ext_resource type="Texture2D" uid="uid://rdigq1ge36yh" path="res://assets/Characters/Roxxane Flint/BearPet/WalkDown/BearPetWalkDown_0004.png" id="12_oh720"]
+[ext_resource type="Texture2D" uid="uid://dkdvu63i3kenj" path="res://assets/Characters/Roxxane Flint/BearPet/WalkUp/BearPetWalkUp_0002.png" id="13_jk1sa"]
+[ext_resource type="Texture2D" uid="uid://c5ueqfoyb80ss" path="res://assets/Characters/Roxxane Flint/BearPet/WalkUp/BearPetWalkUp_0003.png" id="14_ss3q6"]
+[ext_resource type="Texture2D" uid="uid://dwm4j858mc6n5" path="res://assets/Characters/Roxxane Flint/BearPet/WalkUp/BearPetWalkUp_0004.png" id="15_cgtes"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_nj5h1"]
 animations = [{
@@ -47,6 +55,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("9_8576j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_68ixv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_sqm1u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_oh720")
+}],
+"loop": 1,
+"name": &"Walk_Down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("2_4hxuy")
 }, {
 "duration": 1.0,
@@ -60,6 +85,23 @@ animations = [{
 }],
 "loop": 1,
 "name": &"Walk_Front",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_dvue7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_jk1sa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_ss3q6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_cgtes")
+}],
+"loop": 1,
+"name": &"Walk_Up",
 "speed": 6.0
 }]
 
@@ -77,8 +119,9 @@ IsInUse = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=549918]
 sprite_frames = SubResource("SpriteFrames_nj5h1")
-animation = &"Jump"
+animation = &"Idle"
 autoplay = "Idle"
+frame_progress = 0.7337276
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=200568081]
 position = Vector2(0, 1.0925977)
