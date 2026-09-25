@@ -1,5 +1,4 @@
-class_name NeighboordBase
-extends CharacterBody2D
+class_name NeighboordBase extends CharacterBody2D
 
 
 @export var SPEED: float = 100.0

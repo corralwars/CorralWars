@@ -2,7 +2,6 @@ class_name PetBase extends CharacterBody2D
 
 @export_category("Target")
 @export var GROUP_FOLLOW: String = ""
-@export var COLLISION: CollisionObject2D
 
 @export_category("Movement Delay")
 @export var MOVEMENT_DELAY: float = 1.0
