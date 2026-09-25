@@ -109,10 +109,9 @@ animations = [{
 radius = 6.282437
 height = 18.027863
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1038748228 node_paths=PackedStringArray("COLLISION", "animatedSprite") groups=["npc"]]
+[node name="BearPet" type="CharacterBody2D" unique_id=1038748228 node_paths=PackedStringArray("COLLISION", "animatedSprite") groups=["npc"]]
 scale = Vector2(3.661, 3.661)
 script = ExtResource("1_nj5h1")
-GROUP_FOLLOW = "Player"
 COLLISION = NodePath(".")
 animatedSprite = NodePath("AnimatedSprite2D")
 IsInUse = true

@@ -118,8 +118,10 @@ animatedSprite2D = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2084403467]
 sprite_frames = SubResource("SpriteFrames_oht21")
-animation = &"Walk_Front"
+animation = &"Idle"
 autoplay = "Idle"
+frame = 1
+frame_progress = 0.7097363
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=697767521]
 position = Vector2(0, -3)

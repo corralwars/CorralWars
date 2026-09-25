@@ -103,7 +103,7 @@ animations = [{
 radius = 6.0
 height = 22.0
 
-[node name="MadreEcuanime" type="CharacterBody2D" unique_id=1701767382 node_paths=PackedStringArray("animatedSprite") groups=["npc"]]
+[node name="MadreEcuanime" type="CharacterBody2D" unique_id=1701767382 node_paths=PackedStringArray("animatedSprite") groups=["MadreEcuanime", "npc"]]
 scale = Vector2(3.661, 3.661)
 script = ExtResource("1_ua3ti")
 animatedSprite = NodePath("AnimatedSprite2D")
@@ -112,6 +112,7 @@ animatedSprite = NodePath("AnimatedSprite2D")
 sprite_frames = SubResource("SpriteFrames_4n17y")
 animation = &"Idle"
 autoplay = "Idle"
+frame_progress = 0.23688006
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=532742488]
 position = Vector2(0, -2)

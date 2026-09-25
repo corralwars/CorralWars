@@ -1,0 +1,141 @@
+[gd_scene format=3 uid="uid://s1pya0rh88nd"]
+
+[ext_resource type="Script" uid="uid://c21eyx0hx1i4v" path="res://scripts/characters/solstice.gd" id="1_e7sc0"]
+[ext_resource type="Texture2D" uid="uid://bsaaqc6n0pwf1" path="res://assets/Characters/Solstice/Idle/sols idle_0001.png" id="2_x41ul"]
+[ext_resource type="Texture2D" uid="uid://8saqbo34jyvw" path="res://assets/Characters/Solstice/Idle/sols idle_0002.png" id="3_8ab2r"]
+[ext_resource type="Texture2D" uid="uid://dqdvwb5l63m2n" path="res://assets/Characters/Solstice/Idle/sols idle_0003.png" id="4_porf7"]
+[ext_resource type="Texture2D" uid="uid://cxfhlld4fl148" path="res://assets/Characters/Solstice/Idle/sols idle_0004.png" id="5_vtppk"]
+[ext_resource type="Texture2D" uid="uid://bo6aubrtxmguu" path="res://assets/Characters/Solstice/Idle/sols idle_0005.png" id="6_csujf"]
+[ext_resource type="Texture2D" uid="uid://cksbs6di7wfr" path="res://assets/Characters/Solstice/Idle/sols idle_0006.png" id="7_iunl3"]
+[ext_resource type="Texture2D" uid="uid://cr2ykx1roucp2" path="res://assets/Characters/Solstice/Idle/sols idle_0007.png" id="8_d17u1"]
+[ext_resource type="Texture2D" uid="uid://mr4auyhy4vql" path="res://assets/Characters/Solstice/Idle/sols idle_0008.png" id="9_h4amc"]
+[ext_resource type="Texture2D" uid="uid://mmjx0n0v5cw0" path="res://assets/Characters/Solstice/Idle/sols idle_0009.png" id="10_2cgeb"]
+[ext_resource type="Texture2D" uid="uid://bs0cbqc5htp8w" path="res://assets/Characters/Solstice/Idle/sols idle_0010.png" id="11_2g7yb"]
+[ext_resource type="Texture2D" uid="uid://d073iowgdxhkp" path="res://assets/Characters/Solstice/Idle/sols idle_0011.png" id="12_trto0"]
+[ext_resource type="Texture2D" uid="uid://cllbrsnfyrwko" path="res://assets/Characters/Solstice/Idle/sols idle_0012.png" id="13_54a4h"]
+[ext_resource type="Texture2D" uid="uid://cds5qeccavegx" path="res://assets/Characters/Solstice/Walk_Front/sols walk_0001.png" id="14_lfcqq"]
+[ext_resource type="Texture2D" uid="uid://bfkosrxun1qic" path="res://assets/Characters/Solstice/Walk_Front/sols walk_0002.png" id="15_7rs0p"]
+[ext_resource type="Texture2D" uid="uid://c1qm216uc8van" path="res://assets/Characters/Solstice/Walk_Front/sols walk_0003.png" id="16_su2im"]
+[ext_resource type="Texture2D" uid="uid://cv2qj2s3807xn" path="res://assets/Characters/Solstice/Walk_Front/sols walk_0004.png" id="17_i11xi"]
+[ext_resource type="Texture2D" uid="uid://n8fnp8i2l50t" path="res://assets/Characters/Solstice/Walk_Front/sols walk_0005.png" id="18_uiy3f"]
+[ext_resource type="Texture2D" uid="uid://cjtfifq424p5s" path="res://assets/Characters/Solstice/Walk_Front/sols walk_0006.png" id="19_brik0"]
+[ext_resource type="Texture2D" uid="uid://dcl10548vgl3s" path="res://assets/Characters/Solstice/Walk_Front/sols walk_0007.png" id="20_7xdyv"]
+[ext_resource type="Texture2D" uid="uid://b12jjbpujv645" path="res://assets/Characters/Solstice/Walk_Front/sols walk_0008.png" id="21_2s3q0"]
+[ext_resource type="Texture2D" uid="uid://7a7hjgjr4ww5" path="res://assets/Characters/Solstice/Walk_Front/sols walk_0009.png" id="22_6sf7y"]
+[ext_resource type="Texture2D" uid="uid://41x7f76fn0lc" path="res://assets/Characters/Solstice/Walk_Front/sols walk_0010.png" id="23_0yiel"]
+[ext_resource type="Texture2D" uid="uid://dtyhecciqy8b3" path="res://assets/Characters/Solstice/Walk_Front/sols walk_0011.png" id="24_4unqk"]
+[ext_resource type="Texture2D" uid="uid://be2oex6akt0wr" path="res://assets/Characters/Solstice/Walk_Front/sols walk_0012.png" id="25_mbeft"]
+[ext_resource type="Texture2D" uid="uid://chnbw47fpqrbg" path="res://assets/Characters/Solstice/Walk_Front/sols walk_0013.png" id="26_8emat"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oht21"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_x41ul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_8ab2r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_porf7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_vtppk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_csujf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_iunl3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_d17u1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_h4amc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_2cgeb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_2g7yb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_trto0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_54a4h")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_lfcqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_7rs0p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_su2im")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_i11xi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_uiy3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_brik0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_7xdyv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_2s3q0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_6sf7y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_0yiel")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_4unqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_mbeft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_8emat")
+}],
+"loop": 1,
+"name": &"Walk_Front",
+"speed": 12.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_luni0"]
+radius = 5.462989
+height = 21.305656
+
+[node name="Solstice" type="CharacterBody2D" unique_id=1504751348 node_paths=PackedStringArray("animatedSprite") groups=["Solstice", "npc"]]
+scale = Vector2(3.661, 3.661)
+script = ExtResource("1_e7sc0")
+MOVE_AREA_SIZE = Vector2(200, 100)
+MIN_MOVE_TIME = 2.5
+MAX_MOVE_TIME = 5.0
+MIN_IDLE_TIME = 0.5
+MAX_IDLE_TIME = 1.0
+MIN_DISTANCE_TO_TARGET = 6.0
+animatedSprite = NodePath("AnimatedSprite2D")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1814516856]
+sprite_frames = SubResource("SpriteFrames_oht21")
+animation = &"Walk_Front"
+autoplay = "Idle"
+frame_progress = 0.19841486
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=665625305]
+position = Vector2(-0.27314943, 1.912046)
+shape = SubResource("CapsuleShape2D_luni0")

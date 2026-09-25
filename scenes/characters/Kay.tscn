@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://p5qeyr45i15w"]
+
+[ext_resource type="Texture2D" uid="uid://dxc8sknp2so4l" path="res://assets/Characters/Kay/Idle/kay_idle_0001.png" id="1_lhi4t"]
+[ext_resource type="Script" uid="uid://b3jg8n31if23" path="res://scripts/characters/kay.gd" id="1_p285x"]
+[ext_resource type="Texture2D" uid="uid://c58j2ocme8lnm" path="res://assets/Characters/Kay/Idle/kay_idle_0002.png" id="2_p285x"]
+[ext_resource type="Texture2D" uid="uid://ctqxtlntxyy3m" path="res://assets/Characters/Kay/Idle/kay_idle_0003.png" id="3_mftxj"]
+[ext_resource type="Texture2D" uid="uid://dv7mcivb5e51l" path="res://assets/Characters/Kay/Idle/kay_idle_0004.png" id="4_1arh7"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c3edr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_lhi4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_p285x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mftxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1arh7")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c3edr"]
+radius = 6.0
+height = 22.0
+
+[node name="Kay" type="CharacterBody2D" unique_id=1820528063 node_paths=PackedStringArray("animatedSprite") groups=["Kay", "npc"]]
+scale = Vector2(3.661, 3.661)
+script = ExtResource("1_p285x")
+MOVEMENT_DELAY = 0.2
+animatedSprite = NodePath("AnimatedSprite2D")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=833662143]
+sprite_frames = SubResource("SpriteFrames_c3edr")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=736279140]
+position = Vector2(0, -2)
+shape = SubResource("CapsuleShape2D_c3edr")

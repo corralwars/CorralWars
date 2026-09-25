@@ -1,0 +1,68 @@
+[gd_scene format=3 uid="uid://dmlsaqfjnsgxo"]
+
+[ext_resource type="Script" uid="uid://cpqygrcvwx1ot" path="res://scripts/characters/loky.gd" id="1_2ufqs"]
+[ext_resource type="Texture2D" uid="uid://dc1a5lswc2ujq" path="res://assets/Characters/Loky/Idle/loky_0001.png" id="1_bym53"]
+[ext_resource type="Texture2D" uid="uid://epna60f8fws2" path="res://assets/Characters/Loky/Idle/loky_0002.png" id="2_2ufqs"]
+[ext_resource type="Texture2D" uid="uid://ciq6vxub8usgi" path="res://assets/Characters/Loky/Idle/loky_0003.png" id="3_4gjdu"]
+[ext_resource type="Texture2D" uid="uid://b5jfdk85cyxnt" path="res://assets/Characters/Loky/Idle/loky_0004.png" id="4_q44im"]
+[ext_resource type="Texture2D" uid="uid://34dyfmiypmca" path="res://assets/Characters/Loky/Idle/loky_0005.png" id="5_whbl6"]
+[ext_resource type="Texture2D" uid="uid://dgiu5qhxsgntx" path="res://assets/Characters/Loky/Idle/loky_0006.png" id="6_67tl4"]
+[ext_resource type="Texture2D" uid="uid://df7j40yd216hr" path="res://assets/Characters/Loky/Idle/loky_0007.png" id="7_hlcar"]
+[ext_resource type="Texture2D" uid="uid://b5f17wuo7rbsq" path="res://assets/Characters/Loky/Idle/loky_0008.png" id="8_yedql"]
+[ext_resource type="Texture2D" uid="uid://tk8oxwbaxtp4" path="res://assets/Characters/Loky/Idle/loky_0009.png" id="9_wh8uw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oht21"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_bym53")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_2ufqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_4gjdu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_q44im")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_whbl6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_67tl4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hlcar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_yedql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wh8uw")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_bym53"]
+radius = 14.0
+height = 90.0
+
+[node name="Loky" type="CharacterBody2D" unique_id=1293614822 node_paths=PackedStringArray("animatedSprite") groups=["Loky", "npc"]]
+script = ExtResource("1_2ufqs")
+MOVEMENT_DELAY = 0.4
+animatedSprite = NodePath("AnimatedSprite2D")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=864364652]
+scale = Vector2(3.661, 3.661)
+sprite_frames = SubResource("SpriteFrames_oht21")
+animation = &"Idle"
+autoplay = "Idle"
+frame = 1
+frame_progress = 0.69675696
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=40417287]
+position = Vector2(0, 2)
+shape = SubResource("CapsuleShape2D_bym53")
