@@ -1,0 +1,116 @@
+[gd_scene format=3 uid="uid://bkm3onkgngdl7"]
+
+[ext_resource type="Texture2D" uid="uid://dcjpom6n8nd2e" path="res://assets/interfaces/splash.png" id="1_l7eb1"]
+[ext_resource type="Script" uid="uid://cehl11tm8tplq" path="res://scripts/interfaces/texture_rect.gd" id="2_o6cva"]
+[ext_resource type="Script" uid="uid://d4i58n8lo8sqt" path="res://scripts/interfaces/fireflies.gd" id="3_34o0m"]
+[ext_resource type="Texture2D" uid="uid://du65lyaelsj23" path="res://assets/interfaces/polygon-init.svg" id="3_dovi3"]
+[ext_resource type="FontFile" uid="uid://b2co8twwp6p1y" path="res://assets/fonts/Pixelify_Sans/static/PixelifySans-Medium.ttf" id="4_gy6yy"]
+[ext_resource type="Script" uid="uid://bjp4csswo8ybn" path="res://scripts/interfaces/splash.gd" id="4_hjn65"]
+[ext_resource type="Script" uid="uid://dvp3dbkdsq647" path="res://scripts/interfaces/v_box_container.gd" id="4_lukvu"]
+[ext_resource type="Texture2D" uid="uid://dknnivhbbusfr" path="res://assets/interfaces/mark.png" id="4_qtwtv"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_u0a3c"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 98, 0)
+
+[node name="Control" type="Control" unique_id=1316581894]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1907655724]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("1_l7eb1")
+expand_mode = 3
+stretch_mode = 6
+script = ExtResource("2_o6cva")
+
+[node name="fireflies" type="GPUParticles2D" parent="TextureRect" unique_id=370118883 node_paths=PackedStringArray("background")]
+position = Vector2(100, 100)
+process_material = SubResource("ParticleProcessMaterial_u0a3c")
+script = ExtResource("3_34o0m")
+background = NodePath("..")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1345028035]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 857.0
+offset_top = -3.0
+offset_right = -3.0
+offset_bottom = -3.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_dovi3")
+script = ExtResource("4_hjn65")
+
+[node name="TextureRect3" type="TextureRect" parent="TextureRect2" unique_id=1621263853 groups=["mark"]]
+layout_mode = 0
+offset_left = 789.0
+offset_top = 30.0
+offset_right = 1047.0
+offset_bottom = 117.0
+texture = ExtResource("4_qtwtv")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect2" unique_id=885902984]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -168.0
+offset_top = -209.5
+offset_right = 520.0
+offset_bottom = 209.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 21
+script = ExtResource("4_lukvu")
+
+[node name="Label" type="Label" parent="TextureRect2/VBoxContainer" unique_id=990657638]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_gy6yy")
+theme_override_font_sizes/font_size = 115
+text = "Corral Wars"
+
+[node name="Label2" type="Label" parent="TextureRect2/VBoxContainer" unique_id=1382893398 groups=["options"]]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_gy6yy")
+theme_override_font_sizes/font_size = 40
+text = "Play Game"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="TextureRect2/VBoxContainer" unique_id=1621631002 groups=["options"]]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_gy6yy")
+theme_override_font_sizes/font_size = 40
+text = "Settings"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="TextureRect2/VBoxContainer" unique_id=1449558342 groups=["options"]]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_gy6yy")
+theme_override_font_sizes/font_size = 40
+text = "Credits"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="TextureRect2/VBoxContainer" unique_id=1771109862 groups=["options"]]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("4_gy6yy")
+theme_override_font_sizes/font_size = 40
+text = "Exit"
+horizontal_alignment = 1
+
+[connection signal="mouse_entered" from="TextureRect2/VBoxContainer" to="TextureRect2/VBoxContainer" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="TextureRect2/VBoxContainer" to="TextureRect2/VBoxContainer" method="_on_mouse_exited"]

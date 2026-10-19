@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 699.846 919.698">
+  <defs>
+    <style>
+      .cls-1{fill:#a34523;opacity:0.5}
+    </style>
+  </defs>
+  <title>polygon-init.svg</title>
+  <g id="Layer_1" data-name="Layer 1">
+    <path d="M0 0 L699.846 0 L699.846 919.698 L402.8 919.698 Z" class="cls-1"/>
+  </g>
+</svg>
